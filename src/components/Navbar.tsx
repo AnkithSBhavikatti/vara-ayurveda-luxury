@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -15,10 +15,23 @@ const links = [
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        scrolled
+          ? "bg-background/95 backdrop-blur-md border-b border-border shadow-gold"
+          : "bg-transparent border-b border-transparent"
+      }`}
+    >
       <div className="container mx-auto flex items-center justify-between py-3 px-4">
         <Link to="/" className="flex items-center gap-3">
           <img src={varaLogo} alt="VARA Ayurveda" className="h-12 w-12 object-contain" />
@@ -34,11 +47,16 @@ const Navbar = () => {
             <Link
               key={link.to}
               to={link.to}
-              className={`text-sm tracking-wider uppercase transition-colors duration-300 hover:text-gold-heading ${
+              className={`relative text-sm tracking-wider uppercase transition-colors duration-300 hover:text-gold-heading group ${
                 location.pathname === link.to ? "text-gold-heading" : "text-foreground/70"
               }`}
             >
               {link.label}
+              <span
+                className={`absolute -bottom-1 left-0 h-[2px] bg-gold transition-all duration-300 glow-gold ${
+                  location.pathname === link.to ? "w-full" : "w-0 group-hover:w-full"
+                }`}
+              />
             </Link>
           ))}
           <Link
