@@ -290,7 +290,7 @@ const Branches = () => {
                   >
                     <div className="relative h-64 bg-card">
                       <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000!2d0!3d0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1"
+                        src={branch.mapEmbed}
                         className="w-full h-full border-0 pointer-events-none"
                         loading="lazy"
                         title={`Map - ${branch.name}`}
