@@ -399,7 +399,7 @@ const Branches = () => {
               </div>
               <div className="p-4 text-center">
                 <a
-                  href="https://www.google.com/maps?q=Housing+Board"
+                  href={branches.find(b => b.name === mapOpen)?.mapUrl || "#"}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-gold hover:text-gold-heading text-sm uppercase tracking-wider transition-colors"
