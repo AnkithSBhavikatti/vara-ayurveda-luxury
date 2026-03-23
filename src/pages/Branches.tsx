@@ -21,23 +21,25 @@ const branches = [
   {
     name: "Housing Board Branch",
     tagline: "Where It All Began",
-    address: "Near Housing Board, Main Road",
-    phone: "+91 98765 43210",
-    hours: "Mon–Sat: 9:00 AM – 7:00 PM",
+    address: "12, 8th Main Rd, NHCS Layout, Govindaraja Nagar Ward, MC Road, Vijayanagar, Bengaluru, Karnataka 560040",
+    phone: "+91 93640 81212",
+    hours: "Mon–Sat: 9:00 AM – 8:00 PM",
     status: "active" as const,
     img: branchExterior,
-    mapUrl: "https://www.google.com/maps?q=Housing+Board",
+    mapUrl: "https://maps.app.goo.gl/PbHDTHPqhVqeXwVF8",
+    mapEmbed: "https://maps.google.com/maps?q=Vara+Ayurveda+12+8th+Main+Rd+NHCS+Layout+Vijayanagar+Bengaluru&t=&z=17&ie=UTF8&iwloc=&output=embed",
     features: ["Panchakarma Suite", "Consultation Rooms", "Herbal Pharmacy", "Therapy Rooms"],
   },
   {
     name: "Vijaynagar Branch",
     tagline: "Expanding Wellness Horizons",
-    address: "Vijaynagar",
+    address: "Vijaynagar, Bengaluru",
     phone: "Coming Soon",
     hours: "Opening Soon",
     status: "coming-soon" as const,
     img: branchVijaynagar,
     mapUrl: "#",
+    mapEmbed: "",
     features: ["Modern Facilities", "Extended Services", "Premium Experience", "Easy Access"],
   },
 ];
@@ -288,7 +290,7 @@ const Branches = () => {
                   >
                     <div className="relative h-64 bg-card">
                       <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000!2d0!3d0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1"
+                        src={branch.mapEmbed}
                         className="w-full h-full border-0 pointer-events-none"
                         loading="lazy"
                         title={`Map - ${branch.name}`}
@@ -388,7 +390,7 @@ const Branches = () => {
               </div>
               <div className="h-[400px]">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000!2d0!3d0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1"
+                  src={branches.find(b => b.name === mapOpen)?.mapEmbed || ""}
                   className="w-full h-full border-0"
                   loading="lazy"
                   title={`Map - ${mapOpen}`}
@@ -397,7 +399,7 @@ const Branches = () => {
               </div>
               <div className="p-4 text-center">
                 <a
-                  href="https://www.google.com/maps?q=Housing+Board"
+                  href={branches.find(b => b.name === mapOpen)?.mapUrl || "#"}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-gold hover:text-gold-heading text-sm uppercase tracking-wider transition-colors"
