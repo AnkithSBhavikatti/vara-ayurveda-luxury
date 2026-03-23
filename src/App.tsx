@@ -11,6 +11,7 @@ import Treatments from "./pages/Treatments";
 import Consultation from "./pages/Consultation";
 import Products from "./pages/Products";
 import Contact from "./pages/Contact";
+import Branches from "./pages/Branches";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
