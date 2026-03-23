@@ -11,6 +11,7 @@ import Treatments from "./pages/Treatments";
 import Consultation from "./pages/Consultation";
 import Products from "./pages/Products";
 import Contact from "./pages/Contact";
+import Branches from "./pages/Branches";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/treatments" element={<Treatments />} />
           <Route path="/consultation" element={<Consultation />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/branches" element={<Branches />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
