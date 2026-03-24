@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
 
-const whatsappUrl = `https://wa.me/?text=${encodeURIComponent("Hello VARA Ayurveda, I'd like to know more about your treatments.")}`;
+const whatsappUrl = `https://wa.me/919364081212?text=${encodeURIComponent("Hello VARA Ayurveda, I'd like to know more about your treatments.")}`;
 
 const StickyConsultation = () => (
   <motion.div
