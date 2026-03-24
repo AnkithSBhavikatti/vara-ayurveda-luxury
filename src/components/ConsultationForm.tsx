@@ -4,37 +4,11 @@ import { toast } from "sonner";
 
 const ConsultationForm = () => {
   const [form, setForm] = useState({ name: "", phone: "", email: "", concern: "" });
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-
-    try {
-      const response = await fetch("https://formsubmit.co/ajax/varaayurveda@gmail.com", {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({
-          name: form.name,
-          phone: form.phone,
-          email: form.email,
-          "Health Concern": form.concern,
-          _subject: `New Consultation Request from ${form.name}`,
-          _template: "table",
-        }),
-      });
-
-      if (response.ok) {
-        toast.success("Thank you! We'll contact you shortly.");
-        setForm({ name: "", phone: "", email: "", concern: "" });
-      } else {
-        toast.error("Something went wrong. Please try again.");
-      }
-    } catch {
-      toast.error("Network error. Please try again.");
-    } finally {
-      setIsSubmitting(false);
-    }
+    toast.success("Thank you! We'll contact you shortly.");
+    setForm({ name: "", phone: "", email: "", concern: "" });
   };
 
   return (
@@ -71,10 +45,9 @@ const ConsultationForm = () => {
       />
       <button
         type="submit"
-        disabled={isSubmitting}
-        className="w-full gradient-gold text-primary-foreground py-3 rounded-sm font-semibold uppercase tracking-wider text-sm hover:opacity-90 transition-opacity glow-gold-hover disabled:opacity-60"
+        className="w-full gradient-gold text-primary-foreground py-3 rounded-sm font-semibold uppercase tracking-wider text-sm hover:opacity-90 transition-opacity glow-gold-hover"
       >
-        {isSubmitting ? "Sending..." : "Book Consultation"}
+        Book Consultation
       </button>
     </motion.form>
   );
