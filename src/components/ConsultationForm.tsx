@@ -11,6 +11,7 @@ const ConsultationForm = () => {
       transition={{ duration: 0.6 }}
       className="max-w-lg mx-auto"
     >
+    <div className="rounded-md border-2 border-gold/40 bg-card/50 p-3 shadow-[0_0_30px_-10px_hsl(var(--gold)/0.2)]">
       <iframe
         src={GOOGLE_FORM_EMBED_URL}
         width="100%"
@@ -18,11 +19,12 @@ const ConsultationForm = () => {
         frameBorder={0}
         marginHeight={0}
         marginWidth={0}
-        className="rounded-sm border border-border"
+        className="rounded-sm"
         title="Book Consultation"
       >
         Loading…
       </iframe>
+    </div>
     </motion.div>
   );
 };
