@@ -1,56 +1,29 @@
-import { useState, useEffect, useCallback } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import varaLogo from "@/assets/vara-logo.png";
 
 const links = [
-  { to: "/", hash: "#home", label: "Home" },
-  { to: "/about", hash: "#about", label: "About" },
-  { to: "/treatments", hash: "#treatments", label: "Treatments" },
-  { to: "/consultation", hash: "#consultation", label: "Consultation" },
-  { to: "/products", hash: "#products", label: "Products" },
-  { to: "/branches", hash: "#branches", label: "Branches" },
-  { to: "/contact", hash: "#contact", label: "Contact" },
+  { to: "/", label: "Home" },
+  { to: "/about", label: "About" },
+  { to: "/treatments", label: "Treatments" },
+  { to: "/consultation", label: "Consultation" },
+  { to: "/products", label: "Products" },
+  { to: "/branches", label: "Branches" },
+  { to: "/contact", label: "Contact" },
 ];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
-  const navigate = useNavigate();
-  const isHome = location.pathname === "/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
-  const handleNavClick = useCallback((link: typeof links[0]) => {
-    setOpen(false);
-    if (isHome) {
-      const el = document.querySelector(link.hash);
-      if (el) {
-        el.scrollIntoView({ behavior: "smooth" });
-        return;
-      }
-    }
-    // If not on home, navigate to home with hash
-    if (link.hash) {
-      navigate("/" + link.hash);
-    }
-  }, [isHome, navigate]);
-
-  // Handle hash on page load/navigation
-  useEffect(() => {
-    if (location.hash) {
-      setTimeout(() => {
-        const el = document.querySelector(location.hash);
-        if (el) el.scrollIntoView({ behavior: "smooth" });
-      }, 100);
-    }
-  }, [location]);
 
   return (
     <nav
@@ -72,27 +45,27 @@ const Navbar = () => {
         {/* Desktop */}
         <div className="hidden lg:flex items-center gap-8">
           {links.map((link) => (
-            <button
-              key={link.hash}
-              onClick={() => handleNavClick(link)}
-              className={`relative text-sm tracking-wider uppercase transition-colors duration-300 hover:text-gold-heading group bg-transparent border-none cursor-pointer ${
-                location.pathname === link.to && !isHome ? "text-gold-heading" : "text-foreground/70"
+            <Link
+              key={link.to}
+              to={link.to}
+              className={`relative text-sm tracking-wider uppercase transition-colors duration-300 hover:text-gold-heading group ${
+                location.pathname === link.to ? "text-gold-heading" : "text-foreground/70"
               }`}
             >
               {link.label}
               <span
                 className={`absolute -bottom-1 left-0 h-[2px] bg-gold transition-all duration-300 glow-gold ${
-                  location.pathname === link.to && !isHome ? "w-full" : "w-0 group-hover:w-full"
+                  location.pathname === link.to ? "w-full" : "w-0 group-hover:w-full"
                 }`}
               />
-            </button>
+            </Link>
           ))}
-          <button
-            onClick={() => handleNavClick({ to: "/consultation", hash: "#consultation", label: "Consultation" })}
-            className="ml-4 px-5 py-2 text-sm uppercase tracking-wider border border-gold text-gold hover:bg-gold hover:text-primary-foreground transition-all duration-300 glow-gold-hover rounded-sm cursor-pointer bg-transparent"
+          <Link
+            to="/consultation"
+            className="ml-4 px-5 py-2 text-sm uppercase tracking-wider border border-gold text-gold hover:bg-gold hover:text-primary-foreground transition-all duration-300 glow-gold-hover rounded-sm"
           >
             Book Now
-          </button>
+          </Link>
         </div>
 
         {/* Mobile toggle */}
@@ -112,22 +85,24 @@ const Navbar = () => {
           >
             <div className="flex flex-col items-center gap-4 py-6">
               {links.map((link) => (
-                <button
-                  key={link.hash}
-                  onClick={() => handleNavClick(link)}
-                  className={`text-sm tracking-wider uppercase transition-colors bg-transparent border-none cursor-pointer ${
-                    location.pathname === link.to && !isHome ? "text-gold-heading" : "text-foreground/70"
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  onClick={() => setOpen(false)}
+                  className={`text-sm tracking-wider uppercase transition-colors ${
+                    location.pathname === link.to ? "text-gold-heading" : "text-foreground/70"
                   }`}
                 >
                   {link.label}
-                </button>
+                </Link>
               ))}
-              <button
-                onClick={() => handleNavClick({ to: "/consultation", hash: "#consultation", label: "Consultation" })}
-                className="mt-2 px-6 py-2 text-sm uppercase tracking-wider border border-gold text-gold rounded-sm bg-transparent cursor-pointer"
+              <Link
+                to="/consultation"
+                onClick={() => setOpen(false)}
+                className="mt-2 px-6 py-2 text-sm uppercase tracking-wider border border-gold text-gold rounded-sm"
               >
                 Book Now
-              </button>
+              </Link>
             </div>
           </motion.div>
         )}
