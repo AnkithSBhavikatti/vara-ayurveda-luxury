@@ -12,7 +12,7 @@ const Contact = () => {
     setForm({ name: "", email: "", phone: "", message: "" });
   };
 
-  const whatsappUrl = `https://wa.me/?text=${encodeURIComponent("Hello VARA Ayurveda, I'd like to know more about your treatments.")}`;
+  const whatsappUrl = `https://wa.me/919364081212?text=${encodeURIComponent("Hello VARA Ayurveda, I'd like to know more about your treatments.")}`;
 
   return (
     <div className="min-h-screen pt-24">

@@ -2,12 +2,16 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { toast } from "sonner";
 
+const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfLeIne42OZKdfzlhI12x63p3hUfjqMjKjL4bf1OQGA-PJHdA/viewform?usp=header";
+
 const ConsultationForm = () => {
   const [form, setForm] = useState({ name: "", phone: "", email: "", concern: "" });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Thank you! We'll contact you shortly.");
+    const prefilled = `${GOOGLE_FORM_URL}&entry.YOUR_NAME_FIELD=${encodeURIComponent(form.name)}&entry.YOUR_PHONE_FIELD=${encodeURIComponent(form.phone)}&entry.YOUR_EMAIL_FIELD=${encodeURIComponent(form.email)}&entry.YOUR_CONCERN_FIELD=${encodeURIComponent(form.concern)}`;
+    window.open(GOOGLE_FORM_URL, "_blank");
+    toast.success("Redirecting to booking form...");
     setForm({ name: "", phone: "", email: "", concern: "" });
   };
 
