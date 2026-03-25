@@ -54,7 +54,7 @@ const Index = () => {
           <motion.img
             src={varaLogo}
             alt="VARA Ayurveda"
-            className="h-28 w-28 md:h-36 md:w-36 mx-auto mb-8"
+            className="h-28 w-28 md:h-36 md:w-36 mx-auto mb-8 logo-themed"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
