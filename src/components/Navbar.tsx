@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import varaLogo from "@/assets/vara-logo.png";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const links = [
   { to: "/", label: "Home" },
@@ -60,9 +61,10 @@ const Navbar = () => {
               />
             </Link>
           ))}
+          <ThemeToggle />
           <Link
             to="/consultation"
-            className="ml-4 px-5 py-2 text-sm uppercase tracking-wider border border-gold text-gold hover:bg-gold hover:text-primary-foreground transition-all duration-300 glow-gold-hover rounded-sm"
+            className="ml-2 px-5 py-2 text-sm uppercase tracking-wider border border-gold text-gold hover:bg-gold hover:text-primary-foreground transition-all duration-300 glow-gold-hover rounded-sm"
           >
             Book Now
           </Link>

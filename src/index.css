@@ -6,6 +6,57 @@
 
 @layer base {
   :root {
+    --background: 42 55% 90%;
+    --foreground: 340 70% 22%;
+
+    --card: 42 50% 87%;
+    --card-foreground: 340 70% 22%;
+
+    --popover: 42 50% 87%;
+    --popover-foreground: 340 70% 22%;
+
+    --primary: 340 70% 22%;
+    --primary-foreground: 42 55% 90%;
+
+    --secondary: 42 40% 82%;
+    --secondary-foreground: 340 70% 22%;
+
+    --muted: 42 35% 85%;
+    --muted-foreground: 340 50% 35%;
+
+    --accent: 340 60% 28%;
+    --accent-foreground: 42 55% 90%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 42 30% 78%;
+    --input: 42 30% 78%;
+    --ring: 340 70% 22%;
+
+    --radius: 0.5rem;
+
+    --gold: 340 70% 22%;
+    --gold-heading: 340 70% 22%;
+    --gold-accent: 340 60% 28%;
+    --gold-glow: 340 70% 22%;
+
+    --gradient-bg: linear-gradient(135deg, hsl(42, 55%, 90%), hsl(42, 50%, 85%));
+    --gradient-gold: linear-gradient(135deg, hsl(340, 70%, 22%), hsl(340, 60%, 28%));
+    --shadow-gold: 0 0 20px hsl(340 70% 22% / 0.1);
+    --shadow-gold-lg: 0 0 40px hsl(340 70% 22% / 0.15);
+
+    --sidebar-background: 42 50% 87%;
+    --sidebar-foreground: 340 70% 22%;
+    --sidebar-primary: 340 70% 22%;
+    --sidebar-primary-foreground: 42 55% 90%;
+    --sidebar-accent: 42 40% 82%;
+    --sidebar-accent-foreground: 340 70% 22%;
+    --sidebar-border: 42 30% 78%;
+    --sidebar-ring: 340 70% 22%;
+  }
+
+  .dark {
     --background: 5 60% 15%;
     --foreground: 38 50% 88%;
 
@@ -128,9 +179,9 @@
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: hsl(5, 60%, 12%);
+  background: hsl(var(--background));
 }
 ::-webkit-scrollbar-thumb {
-  background: hsl(35, 45%, 45%);
+  background: hsl(var(--muted-foreground));
   border-radius: 3px;
 }
