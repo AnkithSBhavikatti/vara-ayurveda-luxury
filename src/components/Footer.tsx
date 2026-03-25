@@ -7,7 +7,7 @@ const Footer = () => (
     <div className="container mx-auto px-4 py-16">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
         <div className="md:col-span-1">
-          <img src={varaLogo} alt="VARA Ayurveda" className="h-16 w-16 mb-4" />
+          <img src={varaLogo} alt="VARA Ayurveda" className="h-16 w-16 mb-4 logo-themed" />
           <p className="font-heading text-lg text-gold-heading">VARA Ayurveda</p>
           <p className="text-sm text-muted-foreground mt-2 leading-relaxed">
             Rooted in Tradition.<br />Refined for Modern Healing.

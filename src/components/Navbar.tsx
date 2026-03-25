@@ -36,7 +36,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between py-3 px-4">
         <Link to="/" className="flex items-center gap-3">
-          <motion.img src={varaLogo} alt="VARA Ayurveda" className="h-16 w-16 object-contain" animate={{ rotate: [0, 5, -5, 0] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }} />
+          <motion.img src={varaLogo} alt="VARA Ayurveda" className="h-16 w-16 object-contain logo-themed" animate={{ rotate: [0, 5, -5, 0] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }} />
           <div className="hidden sm:block">
             <span className="font-heading text-xl font-semibold text-gold-heading tracking-wider">VARA</span>
             <span className="block text-xs text-gold tracking-[0.3em] -mt-1">AYURVEDA</span>
