@@ -65,7 +65,7 @@ const Consultation = () => (
                     <item.icon className="w-5 h-5 text-gold" />
                     <h3 className="font-heading text-2xl text-gold-heading">{item.title}</h3>
                   </div>
-                  <p className="text-foreground/80 text-sm leading-relaxed">{item.desc}</p>
+                  <p className="text-white/80 dark:text-foreground/80 text-sm leading-relaxed">{item.desc}</p>
                   {/* Gold bottom bar */}
                   <div className="mt-4 h-[2px] w-full bg-gradient-to-r from-transparent via-gold to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
