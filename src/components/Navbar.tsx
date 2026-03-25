@@ -61,9 +61,10 @@ const Navbar = () => {
               />
             </Link>
           ))}
+          <ThemeToggle />
           <Link
             to="/consultation"
-            className="ml-4 px-5 py-2 text-sm uppercase tracking-wider border border-gold text-gold hover:bg-gold hover:text-primary-foreground transition-all duration-300 glow-gold-hover rounded-sm"
+            className="ml-2 px-5 py-2 text-sm uppercase tracking-wider border border-gold text-gold hover:bg-gold hover:text-primary-foreground transition-all duration-300 glow-gold-hover rounded-sm"
           >
             Book Now
           </Link>
