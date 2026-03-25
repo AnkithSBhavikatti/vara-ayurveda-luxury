@@ -172,6 +172,17 @@
     height: 1px;
     background: linear-gradient(90deg, transparent, hsl(35, 45%, 65%), transparent);
   }
+  .logo-themed {
+    filter: brightness(0) saturate(100%) invert(72%) sepia(30%) saturate(500%) hue-rotate(357deg) brightness(90%) contrast(85%);
+  }
+}
+
+:root .logo-themed {
+  filter: brightness(0) saturate(100%) invert(8%) sepia(67%) saturate(5765%) hue-rotate(340deg) brightness(72%) contrast(107%);
+}
+
+.dark .logo-themed {
+  filter: brightness(0) saturate(100%) invert(72%) sepia(30%) saturate(500%) hue-rotate(357deg) brightness(90%) contrast(85%);
 }
 
 /* Scrollbar */
