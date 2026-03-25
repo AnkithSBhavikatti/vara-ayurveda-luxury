@@ -173,16 +173,16 @@
     background: linear-gradient(90deg, transparent, hsl(35, 45%, 65%), transparent);
   }
   .logo-themed {
-    filter: brightness(0) saturate(100%) invert(72%) sepia(30%) saturate(500%) hue-rotate(357deg) brightness(90%) contrast(85%);
+    filter: brightness(0) saturate(100%) invert(75%) sepia(15%) saturate(600%) hue-rotate(5deg) brightness(95%) contrast(90%);
   }
 }
 
 :root .logo-themed {
-  filter: brightness(0) saturate(100%) invert(8%) sepia(67%) saturate(5765%) hue-rotate(340deg) brightness(72%) contrast(107%);
+  filter: brightness(0) saturate(100%) invert(10%) sepia(80%) saturate(3000%) hue-rotate(330deg) brightness(60%) contrast(120%);
 }
 
 .dark .logo-themed {
-  filter: brightness(0) saturate(100%) invert(72%) sepia(30%) saturate(500%) hue-rotate(357deg) brightness(90%) contrast(85%);
+  filter: brightness(0) saturate(100%) invert(75%) sepia(15%) saturate(600%) hue-rotate(5deg) brightness(95%) contrast(90%);
 }
 
 /* Scrollbar */
