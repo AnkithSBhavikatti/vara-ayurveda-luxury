@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import varaLogo from "@/assets/vara-logo.png";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const links = [
   { to: "/", label: "Home" },
