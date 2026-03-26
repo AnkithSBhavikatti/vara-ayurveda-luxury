@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Instagram } from "lucide-react";
+import { Instagram, Youtube } from "lucide-react";
 import varaLogo from "@/assets/vara-logo.png";
 
 const Footer = () => (
@@ -34,14 +34,24 @@ const Footer = () => (
         </div>
         <div>
           <h4 className="text-gold-heading font-heading text-lg mb-4">Connect</h4>
-          <a
-            href="https://www.instagram.com/varaayu__/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-gold transition-colors"
-          >
-            <Instagram size={18} /> @varaayu__
-          </a>
+          <div className="flex flex-col gap-3">
+            <a
+              href="https://www.instagram.com/varaayu__/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-gold transition-colors"
+            >
+              <Instagram size={18} /> @varaayu__
+            </a>
+            <a
+              href="https://www.youtube.com/@varaayurveda"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-gold transition-colors"
+            >
+              <Youtube size={18} /> @varaayurveda
+            </a>
+          </div>
         </div>
       </div>
       <div className="divider-gold mt-12 mb-6" />
