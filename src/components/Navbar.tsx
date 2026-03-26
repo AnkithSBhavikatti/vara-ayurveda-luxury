@@ -51,20 +51,27 @@ const Navbar = () => {
         {/* Desktop */}
         <div className="hidden lg:flex items-center gap-8">
           {links.map((link) => (
-            <Link
-              key={link.to}
-              to={link.to}
-              className={`relative text-sm tracking-wider uppercase transition-colors duration-300 hover:text-gold-heading group ${
-                location.pathname === link.to ? "text-gold-heading" : "text-foreground/70"
-              }`}
-            >
-              {link.label}
-              <span
-                className={`absolute -bottom-1 left-0 h-[2px] bg-gold transition-all duration-300 glow-gold ${
-                  location.pathname === link.to ? "w-full" : "w-0 group-hover:w-full"
-                }`}
-              />
-            </Link>
+            <HoverCard key={link.to} openDelay={200} closeDelay={100}>
+              <HoverCardTrigger asChild>
+                <Link
+                  to={link.to}
+                  className={`relative text-sm tracking-wider uppercase transition-colors duration-300 hover:text-gold-heading group ${
+                    location.pathname === link.to ? "text-gold-heading" : "text-foreground/70"
+                  }`}
+                >
+                  {link.label}
+                  <span
+                    className={`absolute -bottom-1 left-0 h-[2px] bg-gold transition-all duration-300 glow-gold ${
+                      location.pathname === link.to ? "w-full" : "w-0 group-hover:w-full"
+                    }`}
+                  />
+                </Link>
+              </HoverCardTrigger>
+              <HoverCardContent className="w-64 bg-card border-border text-sm" side="bottom" align="center">
+                <p className="font-heading text-gold-heading text-sm mb-1">{link.label}</p>
+                <p className="text-muted-foreground text-xs leading-relaxed">{link.summary}</p>
+              </HoverCardContent>
+            </HoverCard>
           ))}
           <ThemeToggle />
           <Link
