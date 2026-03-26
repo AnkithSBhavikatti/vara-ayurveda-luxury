@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Instagram, MessageCircle, Mail, MapPin } from "lucide-react";
+import { Instagram, MessageCircle, Mail, MapPin, Phone, Youtube } from "lucide-react";
 import { toast } from "sonner";
 
 const Contact = () => {
@@ -44,6 +44,13 @@ const Contact = () => {
                     <div>
                       <p className="text-gold-heading font-heading">Email</p>
                       <p className="text-muted-foreground text-sm">contact@varaayurveda.com</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <Phone className="text-gold mt-1" size={20} />
+                    <div>
+                      <p className="text-gold-heading font-heading">Talk to Us</p>
+                      <p className="text-muted-foreground text-sm">093640 81212</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
