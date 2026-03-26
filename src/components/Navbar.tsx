@@ -4,15 +4,20 @@ import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import varaLogo from "@/assets/vara-logo.png";
 import ThemeToggle from "@/components/ThemeToggle";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
 
 const links = [
-  { to: "/", label: "Home" },
-  { to: "/about", label: "About" },
-  { to: "/treatments", label: "Treatments" },
-  { to: "/consultation", label: "Consultation" },
-  { to: "/products", label: "Products" },
-  { to: "/branches", label: "Branches" },
-  { to: "/contact", label: "Contact" },
+  { to: "/", label: "Home", summary: "Welcome to VARA Ayurveda — explore our hero section, featured treatments, testimonials, and book a consultation." },
+  { to: "/about", label: "About", summary: "Learn about our mission, philosophy, and the ancient Ayurvedic traditions that guide our holistic healing approach." },
+  { to: "/treatments", label: "Treatments", summary: "Discover our authentic therapies including Panchakarma, Detox Therapy, Lifestyle Healing, and more." },
+  { to: "/consultation", label: "Consultation", summary: "Book a personalized Ayurvedic consultation with our expert practitioners to begin your healing journey." },
+  { to: "/products", label: "Products", summary: "Browse our curated collection of herbal formulations and Ayurvedic products — online store coming soon." },
+  { to: "/branches", label: "Branches", summary: "Find a VARA Ayurveda center near you — view our branch locations, addresses, and directions." },
+  { to: "/contact", label: "Contact", summary: "Get in touch via email, phone, or visit us. Follow us on Instagram and YouTube for updates." },
 ];
 
 const Navbar = () => {
