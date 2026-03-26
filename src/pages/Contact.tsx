@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Instagram, MessageCircle, Mail, MapPin, Phone, Youtube } from "lucide-react";
 import { toast } from "sonner";
@@ -39,27 +40,27 @@ const Contact = () => {
               <div>
                 <h2 className="font-heading text-2xl text-gold-heading mb-6">Get in Touch</h2>
                 <div className="space-y-5">
-                  <div className="flex items-start gap-4">
+                  <a href="mailto:contact@varaayurveda.com" className="flex items-start gap-4 group cursor-pointer">
                     <Mail className="text-gold mt-1" size={20} />
                     <div>
-                      <p className="text-gold-heading font-heading">Email</p>
-                      <p className="text-muted-foreground text-sm">contact@varaayurveda.com</p>
+                      <p className="text-gold-heading font-heading group-hover:text-gold transition-colors">Email</p>
+                      <p className="text-muted-foreground text-sm group-hover:text-foreground/70 transition-colors">contact@varaayurveda.com</p>
                     </div>
-                  </div>
-                  <div className="flex items-start gap-4">
+                  </a>
+                  <a href="tel:+919364081212" className="flex items-start gap-4 group cursor-pointer">
                     <Phone className="text-gold mt-1" size={20} />
                     <div>
-                      <p className="text-gold-heading font-heading">Talk to Us</p>
-                      <p className="text-muted-foreground text-sm">093640 81212</p>
+                      <p className="text-gold-heading font-heading group-hover:text-gold transition-colors">Talk to Us</p>
+                      <p className="text-muted-foreground text-sm group-hover:text-foreground/70 transition-colors">093640 81212</p>
                     </div>
-                  </div>
-                  <div className="flex items-start gap-4">
+                  </a>
+                  <Link to="/branches" className="flex items-start gap-4 group cursor-pointer">
                     <MapPin className="text-gold mt-1" size={20} />
                     <div>
-                      <p className="text-gold-heading font-heading">Visit Us</p>
-                      <p className="text-muted-foreground text-sm">VARA Ayurveda Clinic</p>
+                      <p className="text-gold-heading font-heading group-hover:text-gold transition-colors">Visit Us</p>
+                      <p className="text-muted-foreground text-sm group-hover:text-foreground/70 transition-colors">VARA Ayurveda Clinic</p>
                     </div>
-                  </div>
+                  </Link>
                 </div>
               </div>
 
