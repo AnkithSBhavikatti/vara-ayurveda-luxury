@@ -11,13 +11,13 @@ import {
 } from "@/components/ui/hover-card";
 
 const links = [
-  { to: "/", label: "Home", summary: "Welcome to VARA Ayurveda — explore our hero section, featured treatments, testimonials, and book a consultation." },
-  { to: "/about", label: "About", summary: "Learn about our mission, philosophy, and the ancient Ayurvedic traditions that guide our holistic healing approach." },
-  { to: "/treatments", label: "Treatments", summary: "Discover our authentic therapies including Panchakarma, Detox Therapy, Lifestyle Healing, and more." },
-  { to: "/consultation", label: "Consultation", summary: "Book a personalized Ayurvedic consultation with our expert practitioners to begin your healing journey." },
-  { to: "/products", label: "Products", summary: "Browse our curated collection of herbal formulations and Ayurvedic products — online store coming soon." },
-  { to: "/branches", label: "Branches", summary: "Find a VARA Ayurveda center near you — view our branch locations, addresses, and directions." },
-  { to: "/contact", label: "Contact", summary: "Get in touch via email, phone, or visit us. Follow us on Instagram and YouTube for updates." },
+  { to: "/", label: "Home", topics: ["Featured Treatments", "About VARA", "Book Consultation", "Testimonials", "Ayurvedic Products", "Instagram"] },
+  { to: "/about", label: "About", topics: ["Our Story", "Brand Philosophy", "Why VARA", "Our Values"] },
+  { to: "/treatments", label: "Treatments", topics: ["Panchakarma Therapy", "Detox & Purification", "Lifestyle Healing", "Abhyanga Massage", "Shirodhara", "Herbal Consultation"] },
+  { to: "/consultation", label: "Consultation", topics: ["Video Consultation", "E-Mail Consultation", "Personal Consultation", "Booking Form"] },
+  { to: "/products", label: "Products", topics: ["Herbal Formulations", "Ayurvedic Oils", "Online Store — Coming Soon"] },
+  { to: "/branches", label: "Branches", topics: ["Housing Board Branch", "Vijaynagar Branch", "Locations & Directions"] },
+  { to: "/contact", label: "Contact", topics: ["Email Us", "Talk to Us", "Visit Us", "WhatsApp", "Send a Message"] },
 ];
 
 const Navbar = () => {
@@ -67,9 +67,16 @@ const Navbar = () => {
                   />
                 </Link>
               </HoverCardTrigger>
-              <HoverCardContent className="w-64 bg-card border-border text-sm" side="bottom" align="center">
-                <p className="font-heading text-gold-heading text-sm mb-1">{link.label}</p>
-                <p className="text-muted-foreground text-xs leading-relaxed">{link.summary}</p>
+              <HoverCardContent className="w-56 bg-card border-border p-4" side="bottom" align="center">
+                <p className="font-heading text-gold-heading text-sm mb-2">{link.label}</p>
+                <ul className="space-y-1">
+                  {link.topics.map((topic) => (
+                    <li key={topic} className="text-muted-foreground text-xs flex items-center gap-2">
+                      <span className="text-gold text-[8px]">✦</span>
+                      {topic}
+                    </li>
+                  ))}
+                </ul>
               </HoverCardContent>
             </HoverCard>
           ))}
