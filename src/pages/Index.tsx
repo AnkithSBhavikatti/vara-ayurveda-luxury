@@ -126,6 +126,9 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Doctor */}
+      <DoctorSection />
+
       {/* Treatments */}
       <section className="py-24 px-4 bg-card">
         <div className="container mx-auto">
