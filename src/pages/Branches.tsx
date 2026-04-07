@@ -25,7 +25,7 @@ const branches = [
     phone: "+91 93640 81212",
     hours: "Mon–Sat: 9:00 AM – 8:00 PM",
     status: "active" as const,
-    img: branchExterior,
+    img: branchReception,
     mapUrl: "https://maps.app.goo.gl/PbHDTHPqhVqeXwVF8",
     mapEmbed: "https://maps.google.com/maps?q=Vara+Ayurveda+12+8th+Main+Rd+NHCS+Layout+Vijayanagar+Bengaluru&t=&z=17&ie=UTF8&iwloc=&output=embed",
     features: ["Panchakarma Suite", "Consultation Rooms", "Herbal Pharmacy", "Therapy Rooms"],
