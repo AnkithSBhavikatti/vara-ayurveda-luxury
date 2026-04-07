@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { MapPin, Clock, Phone, Navigation, ChevronRight, Star, Shield, Users, X } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
-import branchExterior from "@/assets/branch-housing-board.jpg";
+import branchExterior from "@/assets/branch-exterior-new.png";
 import branchInterior from "@/assets/branch-interior-1.jpg";
 import branchHerbs from "@/assets/branch-herbs.jpg";
-import branchTherapy from "@/assets/branch-therapy.jpg";
+import branchTherapy from "@/assets/branch-treatment-room.png";
 import branchReception from "@/assets/branch-reception.webp";
 import branchVijaynagar from "@/assets/branch-vijaynagar.jpg";
 
