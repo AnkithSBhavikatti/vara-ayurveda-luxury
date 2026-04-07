@@ -7,7 +7,7 @@ import branchExterior from "@/assets/branch-housing-board.jpg";
 import branchInterior from "@/assets/branch-interior-1.jpg";
 import branchHerbs from "@/assets/branch-herbs.jpg";
 import branchTherapy from "@/assets/branch-therapy.jpg";
-import branchReception from "@/assets/branch-reception.jpg";
+import branchReception from "@/assets/branch-reception.webp";
 import branchVijaynagar from "@/assets/branch-vijaynagar.jpg";
 
 const fadeUp = {
