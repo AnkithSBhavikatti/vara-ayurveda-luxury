@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, Instagram } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import ConsultationForm from "@/components/ConsultationForm";
+import DoctorSection from "@/components/DoctorSection";
 import varaLogo from "@/assets/vara-logo.png";
 import heroBg from "@/assets/hero-bg.jpg";
 import panchakarmaImg from "@/assets/treatment-panchakarma.jpg";
@@ -124,6 +125,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Doctor */}
+      <DoctorSection />
 
       {/* Treatments */}
       <section className="py-24 px-4 bg-card">
