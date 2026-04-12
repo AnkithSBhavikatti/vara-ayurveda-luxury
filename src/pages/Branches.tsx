@@ -33,14 +33,14 @@ const branches = [
   {
     name: "Vijaynagar Branch",
     tagline: "Expanding Wellness Horizons",
-    address: "Vijaynagar, Bengaluru",
-    phone: "Coming Soon",
-    hours: "Opening Soon",
-    status: "coming-soon" as const,
+    address: "1701, 17th Cross, Maruthi Mandir Road, Vijayanagar Bus Depot Near TTMC, Chord Rd, Bengaluru-40",
+    phone: "+91 90193 16447",
+    hours: "Mon–Sat: 9:00 AM – 8:00 PM",
+    status: "active" as const,
     img: branchVijaynagar,
-    mapUrl: "#",
-    mapEmbed: "",
-    features: ["Modern Facilities", "Extended Services", "Premium Experience", "Easy Access"],
+    mapUrl: "https://share.google/Y6HiMszqAtmrPCBZR",
+    mapEmbed: "https://maps.google.com/maps?q=1701+17th+Cross+Maruthi+Mandir+Road+Vijayanagar+Bus+Depot+TTMC+Chord+Rd+Bengaluru&t=&z=17&ie=UTF8&iwloc=&output=embed",
+    features: ["Doctor Consultation", "Pharmacy", "Panchakarma", "Marma Therapy"],
   },
 ];
 
