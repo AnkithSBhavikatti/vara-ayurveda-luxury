@@ -301,7 +301,7 @@ const Branches = () => {
             Healing, Closer to You
           </h2>
           <p className="text-foreground/70 mb-8">
-            Visit our Housing Board branch today or stay tuned for Vijaynagar.
+            Visit our Housing Board or Vijaynagar branch today.
           </p>
           <Link
             to="/consultation"
