@@ -60,8 +60,8 @@ const Footer = () => (
       </p>
       <p className="text-center text-xs text-muted-foreground mt-2">
         Developed by{" "}
-        <a href="https://vyuh.gravity.com" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors underline">
-          vyuh.gravity.com
+        <a href="https://vyuhgravity.com" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors underline">
+          vyuhgravity.com
         </a>
       </p>
     </div>
