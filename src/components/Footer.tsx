@@ -36,12 +36,12 @@ const Footer = () => (
           <h4 className="text-gold-heading font-heading text-lg mb-4">Connect</h4>
           <div className="flex flex-col gap-3">
             <a
-              href="https://www.instagram.com/varaayu__/"
+              href="https://www.instagram.com/vara.ayurveda"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-gold transition-colors"
             >
-              <Instagram size={18} /> @varaayu__
+              <Instagram size={18} /> @vara.ayurveda
             </a>
             <a
               href="https://www.youtube.com/@varaayurveda"

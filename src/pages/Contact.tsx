@@ -76,7 +76,7 @@ const Contact = () => {
                   <span className="text-foreground/80 group-hover:text-gold-heading transition-colors">Chat on WhatsApp</span>
                 </a>
                 <a
-                  href="https://www.instagram.com/varaayu__/"
+                  href="https://www.instagram.com/vara.ayurveda"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 bg-secondary/50 border border-border rounded-sm px-5 py-3 hover:border-gold/30 transition-colors group"
