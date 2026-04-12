@@ -153,11 +153,7 @@ const Branches = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.2 }}
-                className={`group bg-card border rounded-sm overflow-hidden transition-all duration-500 ${
-                  branch.status === "active"
-                    ? "border-gold/30 hover:border-gold shadow-gold"
-                    : "border-border opacity-90"
-                }`}
+                className="group bg-card border rounded-sm overflow-hidden transition-all duration-500 border-gold/30 hover:border-gold shadow-gold"
               >
                 <div className="relative overflow-hidden h-56">
                   <img
@@ -165,11 +161,6 @@ const Branches = () => {
                     alt={branch.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
-                  {branch.status === "coming-soon" && (
-                    <div className="absolute inset-0 bg-background/60 flex items-center justify-center">
-                      <span className="font-heading text-2xl text-gold tracking-wider">Coming Soon</span>
-                    </div>
-                  )}
                   {branch.status === "active" && (
                     <div className="absolute top-4 left-4 bg-gold/90 text-primary-foreground px-3 py-1 rounded-sm text-xs font-semibold uppercase tracking-wider">
                       Now Open
@@ -205,27 +196,21 @@ const Branches = () => {
                     ))}
                   </div>
 
-                  {branch.status === "active" ? (
-                    <div className="flex gap-3">
-                      <Link
-                        to="/consultation"
-                        className="flex-1 text-center gradient-gold text-primary-foreground px-4 py-2.5 rounded-sm text-sm font-semibold uppercase tracking-wider glow-gold-hover transition-all duration-300"
-                      >
-                        Book Now
-                      </Link>
-                      <button
-                        onClick={() => setMapOpen(branch.name)}
-                        className="flex items-center gap-2 border border-gold text-gold px-4 py-2.5 rounded-sm text-sm uppercase tracking-wider hover:bg-gold/10 transition-all duration-300"
-                      >
-                        <Navigation className="w-4 h-4" />
-                        Map
-                      </button>
-                    </div>
-                  ) : (
-                    <div className="text-center py-2 border border-border rounded-sm text-muted-foreground text-sm">
-                      Opening Announced Soon
-                    </div>
-                  )}
+                  <div className="flex gap-3">
+                    <Link
+                      to="/consultation"
+                      className="flex-1 text-center gradient-gold text-primary-foreground px-4 py-2.5 rounded-sm text-sm font-semibold uppercase tracking-wider glow-gold-hover transition-all duration-300"
+                    >
+                      Book Now
+                    </Link>
+                    <button
+                      onClick={() => setMapOpen(branch.name)}
+                      className="flex items-center gap-2 border border-gold text-gold px-4 py-2.5 rounded-sm text-sm uppercase tracking-wider hover:bg-gold/10 transition-all duration-300"
+                    >
+                      <Navigation className="w-4 h-4" />
+                      Map
+                    </button>
+                  </div>
                 </div>
               </motion.div>
             ))}
@@ -281,8 +266,7 @@ const Branches = () => {
                 {...fadeUp}
                 className="rounded-sm overflow-hidden border border-border hover:border-gold/30 transition-colors duration-300"
               >
-                {branch.status === "active" ? (
-                  <a
+                <a
                     href={branch.mapUrl}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -304,15 +288,6 @@ const Branches = () => {
                       </div>
                     </div>
                   </a>
-                ) : (
-                  <div className="relative h-64 bg-card flex items-center justify-center">
-                    <div className="text-center">
-                      <MapPin className="w-10 h-10 text-muted-foreground mx-auto mb-2" />
-                      <p className="font-heading text-lg text-gold-heading">{branch.name}</p>
-                      <p className="text-muted-foreground text-sm mt-1">Location reveal coming soon</p>
-                    </div>
-                  </div>
-                )}
               </motion.div>
             ))}
           </div>
