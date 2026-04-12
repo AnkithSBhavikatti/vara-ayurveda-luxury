@@ -251,7 +251,7 @@ const Index = () => {
             <span className="font-heading text-xl">@vara.ayurveda</span>
           </a>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-10 max-w-4xl mx-auto">
-            {[panchakarmaImg, detoxImg, lifestyleImg, aboutImg].map((img, i) => (
+            {[insta1, insta2, insta3, aboutImg].map((img, i) => (
               <a key={i} href="https://www.instagram.com/vara.ayurveda" target="_blank" rel="noopener noreferrer" className="group overflow-hidden rounded-sm aspect-square">
                 <img src={img} alt="Instagram" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 group-hover:brightness-110" />
               </a>
