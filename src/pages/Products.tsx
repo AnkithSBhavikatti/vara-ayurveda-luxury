@@ -44,7 +44,7 @@ const Products = () => (
             Follow us on Instagram to be the first to know when we launch.
           </p>
           <a
-            href="https://www.instagram.com/varaayu__/"
+            href="https://www.instagram.com/vara.ayurveda"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block mt-6 border border-gold text-gold px-6 py-2.5 rounded-sm text-sm uppercase tracking-wider hover:bg-gold/10 transition-all"
