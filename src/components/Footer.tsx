@@ -41,7 +41,7 @@ const Footer = () => (
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-gold transition-colors"
             >
-              <Instagram size={18} /> @varaayu__
+              <Instagram size={18} /> @vara.ayurveda
             </a>
             <a
               href="https://www.youtube.com/@varaayurveda"

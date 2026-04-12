@@ -245,7 +245,7 @@ const Index = () => {
             className="inline-flex items-center gap-3 text-gold hover:text-gold-heading transition-colors text-lg"
           >
             <Instagram size={24} />
-            <span className="font-heading text-xl">@varaayu__</span>
+            <span className="font-heading text-xl">@vara.ayurveda</span>
           </a>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-10 max-w-4xl mx-auto">
             {[panchakarmaImg, detoxImg, lifestyleImg, aboutImg].map((img, i) => (
