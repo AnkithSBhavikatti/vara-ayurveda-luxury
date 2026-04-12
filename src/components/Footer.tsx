@@ -58,6 +58,12 @@ const Footer = () => (
       <p className="text-center text-xs text-muted-foreground">
         © {new Date().getFullYear()} VARA Ayurveda. All rights reserved.
       </p>
+      <p className="text-center text-xs text-muted-foreground mt-2">
+        Developed by{" "}
+        <a href="https://vyuh.gravity.com" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors underline">
+          vyuh.gravity.com
+        </a>
+      </p>
     </div>
   </footer>
 );
